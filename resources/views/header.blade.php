@@ -1,4 +1,28 @@
 <header>
+    <!DOCTYPE html>
+    <html lang="en">
+
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <link rel="icon" href="img/favicon.png" />
+
+        <title>PassionFroid</title>
+
+        <!-- Bootstrap core CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+            integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous" />
+
+        <!-- Custom styles for this template -->
+        <link href="css/album.css" rel="stylesheet" />
+        <link href="css/css1.css" rel="stylesheet" />
+        <script defer src="https://use.fontawesome.com/releases/v5.0.9/js/all.js"
+            integrity="sha384-8iPTk2s/jMVj81dnzb/iFR2sdA7u06vHJyyLlAd4snFpCl/SnyUjRrbdJsw1pGIl" crossorigin="anonymous">
+        </script>
+    </head>
+
     <div class="collapse bg-dark" id="navbarHeader">
         <div class="container">
             <div class="row">
@@ -48,10 +72,16 @@
         <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
             <ul class="navbar-nav">
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Home</a>
+                    <a class="nav-link" href="/home">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Ajouter une image</a>
+                    <a class="nav-link" href="/addImage">Ajouter une image</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/connexion">Connexion</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/inscription">Inscription</a>
                 </li>
             </ul>
         </div>

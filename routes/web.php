@@ -17,3 +17,11 @@ Route::get('/', function () {
     return view('welcome');
 });
 Route::get('/home', '\App\Http\Controllers\HomeController@home');
+
+Route::get('/connexion', '\App\Http\Controllers\AdminController@showConnexion');
+
+Route::post('/connexion', '\App\Http\Controllers\AdminController@connexion')->name('connexion.connexion');
+
+Route::get('/inscription', '\App\Http\Controllers\AdminController@showInscription');
+
+Route::post('/inscription', '\App\Http\Controllers\AdminController@inscription')->name('inscription.inscription');
