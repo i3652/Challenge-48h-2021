@@ -41,3 +41,5 @@ php artisan serve
 ```
 
 ##### Don't forget to change database configuration in the file ".env" and the Cloudinary
+
+### Here's the link to our site: https://challenge-48h-2021.herokuapp.com/
