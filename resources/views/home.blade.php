@@ -1,7 +1,20 @@
 <body>
     @include('header')
 
-    <main role="main">
+    <form action="/search" method="post" role="search">
+        {{ csrf_field() }}
+
+        <div class="input-group">
+            <label class="col-sm-2 col-form-label">Sélection de tag</label>
+            <div class="col-sm-10">
+                <input name="select" type="text" class="form-control" id="select" placeholder="Rechercher">
+                <input type="submit" value="Rechercher" class="btn btn-primary mb-2">
+                    <span class="glyphicon glyphicon-search"><span>
+                </input>
+            </div>
+            
+        </div>
+
         <h1 class="h1-images">Liste des images:</h1>
 
         <div class="album py-5 bg-light">
@@ -114,7 +127,7 @@
                 </div>
             </div>
         </div>
-    </main>
+    </form>
 
 
     @include('footer')

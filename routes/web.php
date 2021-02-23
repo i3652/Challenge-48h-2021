@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Models\Image as Image;
 
 /*
 |--------------------------------------------------------------------------
@@ -32,3 +33,13 @@ Route::post('/inscription', '\App\Http\Controllers\AdminController@inscription')
 Route::get('/ajoutImage', '\App\Http\Controllers\ImageController@showAdd');
 
 Route::post('/ajoutImage', '\App\Http\Controllers\ImageController@addImage')->name('ajoutImage.addImage');
+
+
+Route::any('/search', function(){
+    $select = Input::get('select');
+    $image = Image::where('url_image', 'LIKE', '%'.$select.'%')->get();
+    if(count($image) > 0){
+        return view('home')->withDetails($image)->withQuery($select);
+    }
+    else(return view('home')->withMessage('Pas de résultat correspondant'));
+});

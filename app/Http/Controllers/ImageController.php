@@ -17,11 +17,17 @@ class ImageController extends Controller
             'tag' =>['max:100'], // Ici,  le tag n'étant pas obligatoire, on change la condition à une limite maximale de charactères
         ]);
 
-        $image = Image::create([
-            'url_image' => cloudinary()->upload(request()->file('file'))->getRealPath()->gerSecuredPath(),
+        $url = "https://cloudinary.com/console/c-4dada9593e24a0e5bcc5f6c71ee63a/media_library/asset/image%2Fupload%2Fsamples%2Fanimals%2Fkitten-playing/transform";
+
+        //dd(request());
+        echo(cloudinary()->upload(request()->file('file')));
+        // ->getRealPath()->getSecurePath()
+        echo("Vous êtez bien connecté");
+        /*$image = Image::create([
+            'url_image' => cloudinary()->upload(request()->file('file'))->getRealPath()->getSecurePath(),
             'title' =>request('title'),
             'tag' =>request('tag'),
-        ]);
+        ]);*/
 
         return redirect('/home');
     }
