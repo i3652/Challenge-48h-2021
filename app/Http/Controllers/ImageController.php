@@ -31,4 +31,8 @@ class ImageController extends Controller
 
         return redirect('/home');
     }
+
+    public function showImage(){
+        return view('/image');
+    }
 }

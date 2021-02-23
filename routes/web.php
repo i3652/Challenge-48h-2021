@@ -19,6 +19,7 @@ use App\Models\Image as Image;
 Route::get('/', function () { // redirection automatique vers la page de connexion lors de l'entrée au site
     return view('/connexion');
 });
+
 Route::get('/home', '\App\Http\Controllers\HomeController@home');
 
 Route::get('/connexion', '\App\Http\Controllers\AdminController@showConnexion');
@@ -34,6 +35,7 @@ Route::get('/ajoutImage', '\App\Http\Controllers\ImageController@showAdd');
 
 Route::post('/ajoutImage', '\App\Http\Controllers\ImageController@addImage')->name('ajoutImage.addImage');
 
+Route::get('/image', '\App\Http\Controllers\ImageController@showImage');
 
 Route::any('/search', function(){
     $select = Input::get('select');
