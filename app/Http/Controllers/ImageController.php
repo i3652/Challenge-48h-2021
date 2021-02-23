@@ -7,11 +7,11 @@ use App\Models\Image as Image;
 
 class ImageController extends Controller
 {
-    public function showAdd(){
+    public function showAdd(){ // Fonction permettant d'afficher la page d'ajout d'une ou plusieurs images au serveur
         return view('/ajoutImage');
     }
 
-    public function addImage(){
+    public function addImage(){ // Fonction effectuant la requète d'envoi du/des image(s) au serveur.
         request()->validate([
             'link' =>['required'],
             'title' =>['required'],

@@ -13,14 +13,17 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+// Les routes permettent de faire le lien entre les vues et les fonctions situées dans les controlleurs.
+
+Route::get('/', function () { // redirection automatique vers la page de connexion lors de l'entrée au site
+    return view('/connexion');
 });
 Route::get('/home', '\App\Http\Controllers\HomeController@home');
 
 Route::get('/connexion', '\App\Http\Controllers\AdminController@showConnexion');
 
 Route::post('/connexion', '\App\Http\Controllers\AdminController@connexion')->name('connexion.connexion');
+// On renomme le lien vers la fonction du controller afin de simplifier le code dans la vue associée.
 
 Route::get('/inscription', '\App\Http\Controllers\AdminController@showInscription');
 

@@ -8,11 +8,9 @@ use App\Models\Image as Image;
 
 class DatabaseSeeder extends Seeder
 {
-    /**
-     * Seed the application's database.
-     *
-     * @return void
-     */
+    // Création d'échantillons test dans la BDD afin d'effectuer des tests.
+    // Détermine l'état initial de la BDD après que l'on lance le seeder
+
     public function run()
     {
         $img = new Image();

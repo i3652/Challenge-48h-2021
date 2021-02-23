@@ -11,7 +11,7 @@ class CreateAdministrateursTable extends Migration
      *
      * @return void
      */
-    public function up()
+    public function up() // Crée la table administrateur lors d'une migration
     {
         Schema::create('administrateurs', function (Blueprint $table) {
             $table->id();
@@ -26,7 +26,7 @@ class CreateAdministrateursTable extends Migration
      *
      * @return void
      */
-    public function down()
+    public function down() // écrase la table si elle existe déjà afin d'éviter les doublons.
     {
         Schema::dropIfExists('administrateurs');
     }

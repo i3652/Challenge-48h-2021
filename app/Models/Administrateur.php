@@ -9,7 +9,7 @@ class Administrateur extends Model
 {
     use HasFactory;
 
-    protected $fillable = [
+    protected $fillable = [ // Détermine les paramètres de la table Administrateur
         'email',
         'password',
         'confirmPassword',

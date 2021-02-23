@@ -26,13 +26,13 @@
     @endif
 
     <div class="form-group row">
-        <label for="confirmPassword" class="col-sm-2 col-form-label">Confirmer le mot de passe</label>
+        <label for="password_confirmation" class="col-sm-2 col-form-label">Confirmer le mot de passe</label>
         <div class="col-sm-10">
-            <input name="confirmPassword" type="password" class="form-control" id="confirmPassword" placeholder="Mot de passe">
+            <input name="password_confirmation" type="password" class="form-control" id="password_confirmation" placeholder="Mot de passe">
         </div>
     </div>
 
-    @if($errors->has('confirmPassword'))
+    @if($errors->has('password_confirmation'))
         <p>Le Mot de passe est obligatoire!</p>
     @endif
 
