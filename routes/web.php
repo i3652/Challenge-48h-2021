@@ -41,5 +41,7 @@ Route::any('/search', function(){
     if(count($image) > 0){
         return view('home')->withDetails($image)->withQuery($select);
     }
-    else(return view('home')->withMessage('Pas de résultat correspondant'));
+    else{
+    return view('home')->withMessage('Pas de résultat correspondant');
+    }
 });
