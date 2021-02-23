@@ -25,3 +25,7 @@ Route::post('/connexion', '\App\Http\Controllers\AdminController@connexion')->na
 Route::get('/inscription', '\App\Http\Controllers\AdminController@showInscription');
 
 Route::post('/inscription', '\App\Http\Controllers\AdminController@inscription')->name('inscription.inscription');
+
+Route::get('/ajoutImage', '\App\Http\Controllers\ImageController@showAdd');
+
+Route::post('/ajoutImage', '\App\Http\Controllers\ImageController@addImage')->name('ajoutImage.addImage');

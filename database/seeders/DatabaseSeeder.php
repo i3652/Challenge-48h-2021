@@ -23,7 +23,7 @@ class DatabaseSeeder extends Seeder
 
         $admin = new Admin();
         $admin->email = "admin.admin@admin.com";
-        $admin->password = "rgknZROGNJQO<%N";
+        $admin->password = "Test1234";
         $admin->save();
 
     }
