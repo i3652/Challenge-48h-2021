@@ -24,7 +24,7 @@ class AdminController extends Controller
         ]);
 
         if($result){
-            return view('/home');
+            return redirect('/home');
         }
     }
 

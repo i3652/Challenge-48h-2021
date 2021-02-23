@@ -8,14 +8,14 @@ use App\Models\Image as Image;
 class ImageController extends Controller
 {
     public function showAdd(){
-        return view('addImage');
+        return view('/ajoutImage');
     }
 
     public function addImage(){
         request()->validate([
             'link' =>['required'],
             'title' =>['required'],
-            'tag' =>['required'],
+            'tag' =>['max:100'],
         ]);
 
         $admin = Admin::create([
