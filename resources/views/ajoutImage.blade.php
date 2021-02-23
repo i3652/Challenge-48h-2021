@@ -15,7 +15,14 @@
 @endphp
 
 <form method='post' action='' enctype='multipart/form-data'>
- <input type="file" name="file[]" id="file" multiple>
+    {{ csrf_field() }}
+     <input type="file" name="file" id="file" multiple>
 
- <input type='submit' name='submit' value='Upload'>
+     <input type='text' name='title' value='title'>
+
+     @if($errors->has('title'))
+        <p>Le titre est obligatoire!</p>
+     @endif
+
+     <input type='submit' name='submit' value='Upload'>
 </form>

@@ -13,13 +13,12 @@ class ImageController extends Controller
 
     public function addImage(){ // Fonction effectuant la requète d'envoi du/des image(s) au serveur.
         request()->validate([
-            'link' =>['required'],
             'title' =>['required'],
-            'tag' =>['max:100'],
+            'tag' =>['max:100'], // Ici,  le tag n'étant pas obligatoire, on change la condition à une limite maximale de charactères
         ]);
 
-        $admin = Admin::create([
-            'link' =>request('link'),
+        $image = Image::create([
+            'url_image' => cloudinary()->upload(request()->file('file'))->getRealPath()->gerSecuredPath(),
             'title' =>request('title'),
             'tag' =>request('tag'),
         ]);

@@ -32,7 +32,7 @@ class AdminController extends Controller
         return view('/inscription');
     }
 
-    public function inscription(){ // Fonction qui envoie une requète afin de créer un compte administrateur et renvoie vers la page de connexion
+    public function inscription(){ // Fonction qui envoie une requète afin de créer un compte administrateur et renvoie vers la page de connexion (POST)
         request()->validate([
             'email' =>['required', 'email'],
             'password' =>['required', 'confirmed', 'min:8'],
