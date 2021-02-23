@@ -20,7 +20,6 @@ npm install
 cp .env.example .env
 ```
 
-#### Move the file "database.sqlite" to the folder "database"
 
 #### Generate keys
 
